@@ -52,7 +52,7 @@
 
       responseBox.textContent = "Thinking...";
       try {
-        const res = await fetch('http://localhost:3000/analyze-name', {
+        const res = await fetch('https://ai-name-forecasting.onrender.com/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ name })
