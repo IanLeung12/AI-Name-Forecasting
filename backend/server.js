@@ -27,7 +27,7 @@ app.post("/analyze-name", async (req, res) => {
       messages: [
         {
           role: "user",
-          content: `Briefly explain the significance behind this name or nickname, and focus its potential impact on a person's life and future: "${name}". Provide a concise but scientific analysis within 100 words`,
+          content: `Briefly explain the significance behind this name or nickname, and focus its potential impact on a person's life and future: "${name}". Analyze surnames independently, if applicable. Provide a concise but scientific analysis within 100 words`,
         },
       ],
       max_tokens: 200,
