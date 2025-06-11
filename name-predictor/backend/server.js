@@ -11,6 +11,11 @@ app.use(bodyParser.json());
 // Use environment variable instead
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
+// Add this route at the top of your routes
+app.get("/", (req, res) => {
+  res.send("Name Predictor API is running. Use POST /analyze-name to analyze names.");
+});
+
 // Rest of your code remains the same
 app.post("/analyze-name", async (req, res) => {
   const { name } = req.body;
